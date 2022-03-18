@@ -226,6 +226,18 @@
       min-width: auto;
       margin: 10px;
     }
+  }
 
-    
+  @media only screen and (min-width: 1460px) {
+    header {
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+
+      background-color: var(--primary-color);
+      display: flex;
+      justify-content: left;
+      align-content: center;
+      padding-left: 100px;
+    }
   }
