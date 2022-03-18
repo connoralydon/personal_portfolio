@@ -14,6 +14,7 @@
     margin: 0;
     padding: 0;
     font-family: var(--font-family);
+    color: var(--font-color);
     background-color: var(--back-color);
   }
   /*
@@ -26,10 +27,12 @@
 
     width: 100%;
 
-    --primary-color: #c3c2c2;
+    --primary-color: rgb(40, 40, 70);
     --secondary-color: #36382E;
+    --highlight-color: gray;
     --back-color: #EDE6E3;
-    --font-family: "Segoe UI", "sans-serif";
+    --font-family: 'proxima-nova', sans-serif;
+    --font-color: black;
     /*  */
   }
   /*
@@ -71,11 +74,12 @@
     margin-right: auto;
 
     background-color: var(--primary-color);
+    color: var(--back-color);
     display: flex;
     justify-content: center;
     align-content: center;
     padding: 10px;
-
+    
     font-size: 50pt;
     font-weight: 800;
 
@@ -115,6 +119,7 @@
     font-size: 24px;
     border-bottom: 1px solid black;
     background-color: var(--primary-color);
+    color: var(--back-color);
     text-align: left;
     padding: 2px;
     padding-left: 5px;
@@ -139,7 +144,7 @@
 
   /* for when a table data element is not empty */
   td:not(:empty) {
-    border-bottom: 0.75px solid var(--secondary-color)
+    border-bottom: 0.75px solid var(--secondary-color);
   }
 
   tr.table-info {
