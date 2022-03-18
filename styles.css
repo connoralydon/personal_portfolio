@@ -1,6 +1,9 @@
 /*
   1. Use a more-intuitive box-sizing model.
 */
+
+@media screen and (min-width: 600px) {}
+
 *, *::before, *::after {
     box-sizing: border-box;
   }
@@ -10,14 +13,24 @@
   * {
     margin: 0;
     padding: 0;
+    font-family: var(--font-family);
+    background-color: var(--back-color);
   }
   /*
     3. Allow percentage-based heights in the application
   */
-  html, body {
-    height: 100%;
 
-    --primary-color: gray;
+  html, body {
+    /* height: 100%; */
+    /* min-height: 100%; */
+
+    width: 100%;
+
+    --primary-color: #c3c2c2;
+    --secondary-color: #36382E;
+    --back-color: #EDE6E3;
+    --font-family: "Segoe UI", "sans-serif";
+    /*  */
   }
   /*
     Typographic tweaks!
@@ -50,37 +63,88 @@
   /*
     9. Create a root stacking context
   */
-  #root, #__next {
-    isolation: isolate;
-  }
 
-  .header {
+
+  header {
     height: 100px;
     width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 
     background-color: var(--primary-color);
-  }
-
-  .sticky {
-    position: sticky;
-  }
-
-  .flexbox {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 40px;
-    width: 80%;
-    font-size: 16px;
-    margin: 0 auto;
+    justify-content: left;
+    align-content: center;
+    padding: 20px;
+
+    font-size: 40pt;
+    font-weight: 800;
+
+    font-family: var(--font-family)
+
   }
 
-  .title {
-    color: blue;
 
-    /* hex */
-    color: #91CB3E;
+  #double-table {
+    display: flex;
+    flex-direction: flex;
+    height: 100%;
+  }
 
-    /* hst */
-    color: hsl(230, 50%, 40%)
+
+  footer {
+    bottom: 0;
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  table {
+    padding: 20px;
+    border: 1px solid black;
+    height: 100%;
+    margin: 10px;
+
+    border-radius: 10px;
+  }
+
+  th {
+    font-size: 24px;
+    border-bottom: 1px solid black;
+    background-color: var(--primary-color);
+    text-align: left;
+    padding: 2px;
+    border-radius: 5px;
+  }
+
+  tr {
+  }
+
+  td {
+    padding: 5px;
+  }
+
+  /* for when a table data element is not empty */
+  td:not(:empty) {
+    border-bottom: 0.75px solid var(--secondary-color)
+  }
+
+
+  @media only screen and (max-width: 600px) {
+    #double-table > #double-table{
+      width: 100%;
+    }
+  }
+
+  tr.table-info {
+    font-weight: 600;
+  }
+
+  .table-img {
+    max-height:100px;
+    max-width: 150px;
+    width: auto;
+    height: auto;
   }
