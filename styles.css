@@ -2,7 +2,11 @@
   1. Use a more-intuitive box-sizing model.
 */
 
-@media screen and (min-width: 600px) {}
+@media print {
+  body {
+    background-color: transparent;
+  }
+}
 
 *, *::before, *::after {
     box-sizing: border-box;
