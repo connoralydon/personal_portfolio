@@ -243,4 +243,8 @@
       align-content: center;
       padding-left: 100px;
     }
+
+    .short-text {
+      max-width: 60ch;
+    }
   }
