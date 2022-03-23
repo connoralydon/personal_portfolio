@@ -33,7 +33,6 @@
 
     --primary-color: rgb(40, 40, 70);
     --secondary-color: #36382E;
-    --highlight-color: gray;
     --back-color: #EDE6E3;
     --font-family: 'proxima-nova', sans-serif;
     --font-color: black;
@@ -108,18 +107,26 @@
     padding-bottom: 10px;
   }
 
-  table {
+
+  table, .bordered-element {
     padding: 10px;
     border: 1px solid black;
-    height: 100%;
     margin: 20px;
     width: 100%;
 
     border-radius: 10px;
+  }
+
+  table {
+    height: 100%;
     table-layout: fixed;
   }
 
-  th {
+  .bordered-element {
+    height: auto;
+  }
+
+  th, .bordered-element-header {
     font-size: 24px;
     border-bottom: 1px solid black;
     background-color: var(--primary-color);
@@ -190,19 +197,6 @@
       table-layout: fixed;
       margin: 10px;
     }
-
-    /* td.table-date {
-      min-width: 35px;
-    } */
-    /* td.table-wrapped-link {
-      max-width: 35px;
-    } */
-    /* :not(td.table-date) {
-
-    }
-    :not(td.table-date):not(td.table-wrapped-link){
-      width: auto;
-    } */
     
 
     .table-img {
@@ -229,7 +223,7 @@
       word-break: break-word;
     }
 
-    #short-desc {
+    .short-text {
       width: 95%;
       max-width: auto;
       min-width: auto;
