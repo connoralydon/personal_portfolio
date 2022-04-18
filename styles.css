@@ -197,7 +197,11 @@
 
 
 
-  @media only screen and (max-width: 900px) {
+  @media only screen and (max-width: 950px) {
+
+    #headshot {
+      max-height: 200px;
+    }
 
     .flex-row-col {
       flex-direction: column;
@@ -239,4 +243,10 @@
       min-width: auto;
       margin: 10px;
     }
+
+    @media only screen and (max-width: 550px) {
+      .flex-row-col {
+        flex-direction: column;
+      }
+
   }
