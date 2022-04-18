@@ -71,7 +71,7 @@
   */
 
 
-  header {
+  header, .header-link {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -91,9 +91,16 @@
   }
 
 
-  .flex-row {
+  .flex-row, .flex-row-col {
     display: flex;
     flex-direction: row;
+    height: 100%;
+    justify-content: center;
+  }
+
+  .flex-col {
+    display: flex;
+    flex-direction: column;
     height: 100%;
   }
 
@@ -105,6 +112,7 @@
     padding-right: 40px;
     padding-top: 10px;
     padding-bottom: 10px;
+    text-align: center;
   }
 
 
@@ -117,13 +125,21 @@
     border-radius: 10px;
   }
 
+  table.single {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  img.bordered-element {
+    object-fit: cover;
+    margin: 20px;
+    max-width: 200px;
+    padding: 0;
+  }
+
   table {
     height: 100%;
     table-layout: fixed;
-  }
-
-  .bordered-element {
-    height: auto;
   }
 
   th, .bordered-element-header {
@@ -136,10 +152,7 @@
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 5px;
-  }
-
-
-  tr {
+    margin-bottom: 8px;
   }
 
   td {
@@ -170,25 +183,23 @@
   }
 
 
-  #short-desc {
-    padding: 10px;
-    font-size: 14pt;
-    max-width: 60ch;
-    min-width: 30ch;
-
-    border: 1px solid black;
-    border-radius: 10px;
-    margin: 20px;
-  }
-
-
   .bold {
     font-weight: 800;
   }
 
-  @media only screen and (max-width: 1050px) {
+  .short-text {
+    max-width: 60ch;
+  }
 
-    .flex-row {
+  hr {
+    border-width: 2px;
+  }
+
+
+
+  @media only screen and (max-width: 900px) {
+
+    .flex-row-col {
       flex-direction: column;
     }
     table {
@@ -224,27 +235,8 @@
     }
 
     .short-text {
-      width: 95%;
       max-width: auto;
       min-width: auto;
       margin: 10px;
-    }
-  }
-
-  @media only screen and (min-width: 1460px) {
-    header {
-      width: 100%;
-      margin-left: auto;
-      margin-right: auto;
-
-      background-color: var(--primary-color);
-      display: flex;
-      justify-content: left;
-      align-content: center;
-      padding-left: 100px;
-    }
-
-    .short-text {
-      max-width: 60ch;
     }
   }
