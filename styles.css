@@ -239,6 +239,12 @@
 
     header {
       font-size: 30pt;
+      padding: 0px;
+      position: sticky;
+      top: 0;
+    }
+    h2 {
+      font-size: 20pt;
       padding: 5px;
       position: sticky;
       top: 0;
