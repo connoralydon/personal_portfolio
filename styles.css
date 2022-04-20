@@ -79,6 +79,7 @@
     display: flex;
     justify-content: center;
     align-content: center;
+    text-align: center;
     padding: 0px;
 
     font-size: 50pt;
@@ -246,8 +247,8 @@
     h2 {
       font-size: 20pt;
       padding: 5px;
-      position: sticky;
-      top: 0;
+      /* position: sticky;
+      top: 0; */
 
       border-bottom-left-radius: 10px;
       border-bottom-right-radius: 10px;
