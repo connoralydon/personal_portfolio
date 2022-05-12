@@ -260,6 +260,10 @@
       word-break: break-word;
     }
 
+    .center-object {
+      align-self: center;
+    }
+
     .short-text {
       max-width: auto;
       min-width: auto;
